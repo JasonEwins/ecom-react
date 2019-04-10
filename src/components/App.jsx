@@ -53,6 +53,15 @@ class App extends Component {
         likedItems: this.state.likedItems  
       });
     }
+    else {
+      // if item has been liked remove from list
+      let index = this.state.likedItems.indexOf(item.toString());
+      let removeItems = this.state.likedItems.splice(index, 1)
+
+      this.setState(state => ({
+        likedItems: this.state.likedItems
+      }))
+    }
   }
 
   handleToggleLikes = (likedItems) => {

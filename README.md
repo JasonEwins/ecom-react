@@ -5,7 +5,7 @@ Data from the API became unavailable during development - 'usage limit error' - 
 
 Used mocked data instead, left original API fetch & associated code commented.
 
-All functionality is working as per the task :)
+ :)
 
 However, currently there are no unit tests - this project will give me the opportunity to pickup Jest. I'll introduce some tests over the coming days - and very much want to be writing TDD code moving forward. 
 
