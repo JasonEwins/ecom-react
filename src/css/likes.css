@@ -1,0 +1,29 @@
+.like-button {
+  margin: 10px 50px;
+  padding: 10px;
+  background: #FF2301;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+.like-button svg {
+  margin-right: 6px;
+}
+
+.like-list {
+  position: absolute;
+  right: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 2px;
+}
+
+.like-list__item {
+  background-color: #3D37BD;
+  padding: 8px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  z-index: 10;
+}
+

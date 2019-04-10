@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -22,10 +21,167 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <!--Font awesome icon library-->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <title>Catalog</title>
+    <style type="text/css">
+      
+      .ipl-progress-indicator.available {
+      opacity: 0;
+      }
+      .ipl-progress-indicator {
+      background-color: #f5f5f5;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      opacity: 1;
+      pointer-events: none;
+      -webkit-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+      -moz-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+      transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+      z-index: 9999;
+      }
+      .insp-logo-frame {
+      display: flex;
+      justify-content: center;
+      animation: fadein 436ms;
+      height: 100%;
+      }
+      .insp-logo-frame-img{
+      width: 200px;
+      height: 80px;
+      align-self: center;
+      }
+      .ipl-progress-indicator-head {
+      background-color: #c6dafc;
+      height: 4px;
+      overflow: hidden;
+      position: relative;
+      }
+      .ipl-progress-indicator .first-indicator, .ipl-progress-indicator .second-indicator {
+      background-color: #3D37BD;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      position: absolute;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      transform-origin: left center;
+      -webkit-transform: scaleX(0);
+      -moz-transform: scaleX(0);
+      transform: scaleX(0);
+      }
+      .ipl-progress-indicator .first-indicator {
+      -webkit-animation: first-indicator 2000ms linear infinite;
+      -moz-animation: first-indicator 2000ms linear infinite;
+      animation: first-indicator 2000ms linear infinite;
+      }
+      .ipl-progress-indicator .second-indicator {
+      -webkit-animation: second-indicator 2000ms linear infinite;
+      -moz-animation: second-indicator 2000ms linear infinite;
+      animation: second-indicator 2000ms linear infinite;
+      }
+      .ipl-progress-indicator .insp-logo {
+      animation: App-logo-spin infinite 20s linear;
+      border-radius: 50%;
+      -webkit-align-self: center;
+      -moz-align-self: center;
+      align-self: center;
+      }
+
+      @keyframes App-logo-spin {
+      from {
+      transform: rotate(0deg);
+      }
+      to {
+      transform: rotate(360deg);
+      }
+      }
+      @-webkit-keyframes fadein {
+      from {
+      opacity: 0;
+      }
+      to {
+      opacity: 1;
+      }
+      ;
+      }
+      @-moz-keyframes fadein {
+      from {
+      opacity: 0;
+      }
+      to {
+      opacity: 1;
+      }
+      ;
+      }
+      @keyframes fadein {
+      from {
+      opacity: 0;
+      }
+      to {
+      opacity: 1;
+      }
+      ;
+      }
+      @keyframes first-indicator {
+      0% {
+      transform: translate(0%) scaleX(0);
+      }
+      25% {
+      transform: translate(0%) scaleX(0.5);
+      }
+      50% {
+      transform: translate(25%) scaleX(0.75);
+      }
+      75% {
+      transform: translate(100%) scaleX(0);
+      }
+      100% {
+      transform: translate(100%) scaleX(0);
+      }
+      ;
+      }
+      @keyframes second-indicator {
+      0% {
+      transform: translate(0%) scaleX(0);
+      }
+      60% {
+      transform: translate(0%) scaleX(0);
+      }
+      80% {
+      transform: translate(0%) scaleX(0.6);
+      }
+      100% {
+      transform: translate(100%) scaleX(0.1);
+      }
+      ;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="ipl-progress-indicator" id="ipl-progress-indicator">
+      <div class="ipl-progress-indicator-head">
+        <div class="first-indicator"></div>
+        <div class="second-indicator"></div>
+      </div>
+      <div class="insp-logo-frame">
+        <svg width="160px" height="42px" class="insp-logo-frame-img" viewBox="0 0 160 42">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Depop_logo">
+                    <g id="background">
+                        <rect id="canvas_background" x="0" y="0" width="71.8523896" height="49.6300011"></rect>
+                    </g>
+                    <g id="Layer-1" transform="translate(0.123458, 0.123458)" fill="#FF2300" fill-rule="nonzero">
+                        <path d="M-1.24564151e-14,20.7285502 C-1.24564151e-14,14.0001048 4.80052976,9.86427136 12.4766366,9.86427136 L20.42398,9.86427136 L20.42398,0 L30.3705977,0 L30.3705977,30.9878862 L12.4395993,30.9878862 C4.8004063,30.9878862 -1.42108547e-14,27.0125478 -1.24564151e-14,20.7285502 Z M10.4939057,20.3952144 C10.4939057,22.9754806 12.0560162,24.3211697 15.0569028,24.3211697 L20.3705228,24.3211697 L20.3705228,16.419876 L15.1062859,16.419876 C12.1050289,16.419876 10.4939057,17.7779108 10.4939057,20.3952144 Z M94.6920667,20.3828686 C94.6920667,27.111314 89.891537,31.2471474 82.2154301,31.2471474 L74.2680867,31.2471474 L74.2680867,41.1114188 L64.321469,41.1114188 L64.321469,10.1235326 L82.2524674,10.1235326 C89.8916604,10.1235326 94.6920667,14.098871 94.6920667,20.3828686 Z M84.198161,20.7162044 C84.198161,18.1359382 82.6341987,16.7902491 79.6293614,16.7902491 L74.3215439,16.7902491 L74.3215439,24.6915428 L79.5923241,24.6915428 C82.5972848,24.6915428 84.198161,23.333508 84.198161,20.7162044 Z M159.87774,20.3828686 C159.87774,27.111314 155.07721,31.2471474 147.401103,31.2471474 L139.45376,31.2471474 L139.45376,41.1114188 L129.507142,41.1114188 L129.507142,10.1235326 L147.43814,10.1235326 C155.07721,10.1235326 159.87774,14.098871 159.87774,20.3828686 Z M149.383834,20.7162044 C149.383834,18.1359382 147.819872,16.7902491 144.815034,16.7902491 L139.507217,16.7902491 L139.507217,24.6915428 L144.777997,24.6915428 C147.782958,24.6915428 149.383834,23.333508 149.383834,20.7162044 Z M97.6550519,20.5680552 C97.6550519,13.0376284 103.679788,9.01241313 111.976147,9.01241313 C120.272505,9.01241313 126.297242,13.0376284 126.297242,20.5680552 C126.297242,28.0981115 120.272505,32.2224634 111.976147,32.2224634 C103.679788,32.2101176 97.6550519,28.0981115 97.6550519,20.5680552 Z M116.544082,20.4507703 C116.544082,16.7800021 114.704562,14.9383834 111.914418,14.9383834 C109.124273,14.9383834 107.284754,16.7800021 107.284754,20.4507703 C107.284754,24.072032 109.124273,26.0495777 111.914418,26.0495777 C114.716908,26.0372319 116.544082,24.072032 116.544082,20.4507703 Z M60.9881108,20.9769471 C60.9881108,13.4467673 56.1448646,8.88895542 47.3951695,8.88895542 C38.9904153,8.88895542 33.5804982,13.4467673 33.5804982,20.5806479 C33.5804982,27.8014426 38.9412791,32.0990057 47.875667,32.0990057 C53.4954621,32.0990057 58.0304343,29.9935578 60.4211929,26.5751372 L53.2981767,23.9742535 C52.0658218,25.3242636 50.2049436,26.0673556 48.2455463,26.0673556 C45.3002156,26.0673556 43.2545213,24.8784578 42.7245173,22.8595538 C42.68748,22.7235034 42.6627884,22.5995519 42.6383438,22.4509088 L60.9881108,22.4509088 L60.9881108,20.9770706 L60.9881108,20.9769471 Z M42.7163691,17.7777874 C42.9511857,15.3315962 44.6447786,13.8271405 47.5867759,13.8271405 C50.5290201,13.8271405 52.2226131,15.4172759 52.2226131,17.7777874 L42.7163691,17.7777874 Z" id="svg_1"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+      </div>
+    </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.

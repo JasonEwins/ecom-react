@@ -1,0 +1,32 @@
+.catalog-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.product-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.button__hide-sold {
+  border: 1px solid #020202;
+  color: #020202;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.button__hide-sold:hover {
+  color: #FF2301;
+  border: 1px solid #FF2301;
+}

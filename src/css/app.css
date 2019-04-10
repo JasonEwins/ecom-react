@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;  /* 10 px base */
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+li {
+  list-style-type: none;
+}

@@ -1,0 +1,6 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4rem;
+  background: #f5f5f5;
+}
