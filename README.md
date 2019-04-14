@@ -5,9 +5,14 @@ Data from the API became unavailable during development - 'usage limit error' - 
 
 Used mocked data instead, left original API fetch & associated code commented.
 
- :)
+Functionality is as follows:
+- Items displayed from mock data + product count (identical properties to provided API)
+- ability to like/unlike an item
+- liked items appear in navigation CTA 
+- when clicked, displays liked items
+- 'Hide sold items' CTA completes desired action + updates product count 
 
-However, currently there are no unit tests - this project will give me the opportunity to pickup Jest. I'll introduce some tests over the coming days - and very much want to be writing TDD code moving forward. 
+Currently there are no unit tests - this project will give me the opportunity to pickup Jest. I'll introduce some tests over the coming days - and very much want to be writing TDD code moving forward. 
 
 Any questions, please feel free to reach out jtradex@gmail.com
 
