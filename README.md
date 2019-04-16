@@ -1,24 +1,9 @@
-
-Hi guys, thanks for setting up the challenge, it felt great to jump back into React.
- 
-Data from the API became unavailable during development - 'usage limit error' - I only made a couple of calls...promise!'
-
-Used mocked data instead, left original API fetch & associated code commented.
-
 Functionality is as follows:
-- Items displayed from mock data + product count (identical properties to provided API)
+- Items displayed from mock data
 - ability to like/unlike an item
 - liked items appear in navigation CTA 
 - when clicked, displays liked items
-- 'Hide sold items' CTA completes desired action + updates product count 
-
-Currently there are no unit tests - this project will give me the opportunity to pickup Jest. I'll introduce some tests over the coming days - and very much want to be writing TDD code moving forward. 
-
-Any questions, please feel free to reach out jtradex@gmail.com
-
-Have a cracking day.
-
-
+- 'Hide sold items' CTA completes desired action
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

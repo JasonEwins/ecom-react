@@ -1,9 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { Adapter } from '../setupTest';
+import { shallow, configure } from 'enzyme';
+import renderer from 'react-test-renderer';
+import App from '../components/App';
+import Catalog from '../components/Catalog';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('App component', () => {
+  it('cta reads "hide sold items"', () => {
+    const wrapper = shallow(<Catalog />)
+    const text = wrapper.find('button').text();
+    expect(text).toEqual('Hide sold items');
+  });
 });
+
+
+it('matches the snapshot', () => {
+  const tree = renderer.create(<App />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
