@@ -4,8 +4,6 @@ import '../css/product.css';
 class Product extends Component {
 
   render() {
-
-    // const { error, productData } = this.props;
     const { mockProducts, addLikedItem  } = this.props;
 
     let handleOnChange = (id) => {
@@ -14,19 +12,6 @@ class Product extends Component {
 
     return (
       <div className="items-container">
-        {/*error ? <p>{error.message}</p> : null}
-        {productData.map(product => (
-         <ul>
-          <li>
-            <img src={product.img} alt="product"/>
-          </li>
-          <li>{product.title}</li>
-          <li>{product.brand}</li>
-          <li>{product.size}</li>
-          <li>{product.price}</li>  
-        </ul>
-        ))*/}
-
         {mockProducts.map(product => (
           <div key={product.id} id={product.id}>
           {product.sold ?

@@ -1,9 +1,11 @@
 Functionality is as follows:
-- Items displayed from mock data
+- Items displayed from mock API
 - ability to like/unlike an item
 - liked items appear in navigation CTA 
-- when clicked, displays liked items
+  - when clicked, displays liked items
 - 'Hide sold items' CTA completes desired action
+
+Snapshot testing is included with Jest/Enzyme
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
